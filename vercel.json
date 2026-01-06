@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/blog-backend/server.js" },
+    { "source": "/(.*)", "destination": "/blog-frontend/$1" }
+  ]
+}
