@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>The Masterpiece Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;500&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="side-nav">
+        <div class="nav-brand">M<span>.</span></div>
+        <div class="menu-trigger" id="menuToggle">
+            <div class="burger-lines">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <span class="menu-text">MENU</span>
+        </div>
+
+        <div class="menu-overlay" id="menuOverlay">
+            <div class="overlay-bg"></div>
+
+            <div class="overlay-content">
+                <div class="overlay-left">
+                    <span class="eyebrow">Navigation</span>
+                    <ul class="main-nav-links">
+                        <li><a href="#" style="--i:1">Home</a></li>
+                        <li><a href="#" style="--i:2">The Journal</a></li>
+                        <li><a href="#" style="--i:3">About Us</a></li>
+                        <li><a href="#" style="--i:4">Contact / Feedback</a></li>
+                    </ul>
+                </div>
+
+                <div class="overlay-right">
+                    <div class="auth-box" style="--i:5">
+                        <span class="eyebrow">Community</span>
+
+                        <div id="nav-auth-area">
+                            <a href="login.html" class="nav-login-btn">Login</a>
+                        </div>
+
+                        <a href="signup.html" class="btn-signup" id="dynamicActionBtn">Create Account</a>
+                    </div>
+
+                    <div class="social-box" style="--i:6">
+                        <span class="eyebrow">Follow the story</span>
+                        <div class="social-grid">
+                            <a href="#">Instagram</a>
+                            <a href="#">Twitter</a>
+                            <a href="#">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-menu" id="closeMenu">✕</div>
+        </div>
+        <div class="nav-socials">
+            <a href="#">IG</a>
+            <a href="#">TW</a>
+        </div>
+
+    </nav>
+
+    <header class="hero">
+        <div class="hero-wrapper">
+            <div class="hero-content">
+                <p class="hero-subtitle">Essays on Life & Aesthetics</p>
+                <h1 class="hero-title">The art of <br><em>intentional</em> <br>living.</h1>
+                <div class="hero-footer">
+                    <p>Discover stories that celebrate the beauty of slow living and thoughtful design.</p>
+                    <a href="#" class="explore-btn">Start Reading —</a>
+                </div>
+            </div>
+
+            <div class="hero-image-box">
+                <div class="main-img-wrapper">
+                    <img src="https://i.pinimg.com/564x/1a/84/ef/1a84ef9f49fe64ec89fed3a1b6441647.jpg" alt="Main Hero">
+                    <div class="animated-circle">
+                        <span>Explore<br>Stories</span>
+                    </div>
+                </div>
+                <div class="accent-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&q=80&w=600"
+                        alt="Detail">
+                </div>
+                <div class="circular-text">
+                    <svg viewBox="0 0 100 100">
+                        <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
+                        <text>
+                            <textPath xlink:href="#circlePath underline">ESTABLISHED · TWENTY TWENTY FIVE · </textPath>
+                        </text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="journal-section">
+        <div class="journal-header">
+            <span class="section-label">Selected Entries</span>
+            <h2 class="section-title">The Journal</h2>
+        </div>
+        <div id="filterStatus" style="display:none; margin-bottom: 20px; padding-left: 80px;">
+            <span>Showing filtered results...</span>
+            <button id="resetFilter"
+                style="background:none; border:none; text-decoration:underline; cursor:pointer; margin-left:10px;">Show
+                All Articles</button>
+        </div>
+        <div class="journal-list" id="journalList">
+            <p style="padding-left: 80px; opacity: 0.5;">Loading the journal...</p>
+        </div>
+
+        <div class="hover-reveal" id="hoverclose">
+            <img src="" alt="Preview" class="hover-reveal-img">
+        </div>
+
+    </section>
+
+    <section class="pillars-section">
+        <div class="pillars-container">
+
+            <div class="pillars-intro">
+                <span class="eyebrow">The Categories</span>
+                <h2 class="title">Explore our <em>Core Pillars</em></h2>
+            </div>
+
+            <div class="pillars-grid">
+                <div class="pillars-grid">
+                    <div class="pillar-card">
+                        <div class="pillar-content">
+                            <span class="pillar-number">01</span>
+                            <h3>Culture & <br>Design</h3>
+                            <p>Understanding the visual language of the modern world.</p>
+                            <span class="pillar-btn">Explore Pillar</span>
+                        </div>
+                    </div>
+
+                    <div class="pillar-card dark">
+                        <div class="pillar-content">
+                            <span class="pillar-number">02</span>
+                            <h3>Human <br>Intelligence</h3>
+                            <p>The intersection of cognitive science and daily habits.</p>
+                            <span class="pillar-btn">Explore Pillar</span>
+                        </div>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-content">
+                            <span class="pillar-number">03</span>
+                            <h3>The Digital <br>Frontier</h3>
+                            <p>Notes on artificial intelligence and future tech.</p>
+                            <span class="pillar-btn">Explore Pillar</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="pillar-details-overlay" id="pillarDetails">
+                <div class="pillar-details-content">
+                    <div class="details-left">
+                        <span class="active-num" id="activePillarNum">01</span>
+                        <h2 id="activePillarTitle">Culture & Design</h2>
+                        <p id="activePillarDesc">Detailed insight into this category goes here.</p>
+                        <button class="close-details" id="closePillar">← Back to All Pillars</button>
+                    </div>
+                    <div class="details-right">
+                        <span class="eyebrow">Top Insights in this Pillar</span>
+                        <ul class="pillar-links" id="pillarLinks">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="authority-section">
+        <div class="press-marquee">
+            <div class="marquee-content">
+                <span>As Seen In:</span>
+                <div class="logo-wrap">THE NEW YORK TIMES</div>
+                <div class="logo-wrap">WIRED</div>
+                <div class="logo-wrap">VOGUE</div>
+                <div class="logo-wrap">FORBES</div>
+                <div class="logo-wrap">MEDIUM</div>
+                <div class="logo-wrap">THE NEW YORK TIMES</div>
+                <div class="logo-wrap">WIRED</div>
+                <div class="logo-wrap">VOGUE</div>
+            </div>
+        </div>
+
+        <div class="spotlight-container">
+            <div class="spotlight-image">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=1000"
+                    alt="Author Interview">
+                <div class="play-btn-wrap">
+                    <div class="play-btn"></div>
+                </div>
+            </div>
+            <div class="spotlight-text">
+                <span class="eyebrow">Editor's Spotlight</span>
+                <h2 class="spotlight-title">Conversations on <br><em>Modern Craft</em></h2>
+                <p>An exclusive deep-dive interview with David Chen on the importance of tactile design in a purely
+                    digital world.</p>
+                <div class="spotlight-meta">
+                    <span class="time">12 Min Watch</span>
+                    <span class="sep">•</span>
+                    <span class="date">Dec 2025</span>
+                </div>
+                <a href="#" class="btn-outline">Watch the Film</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section">
+        <div class="newsletter-card">
+            <div class="newsletter-visual">
+                <div class="book-mockup">
+                    <div class="book-spine"></div>
+                    <div class="book-cover">
+                        <span class="book-label">Free Guide</span>
+                        <h4 class="book-title">The Minimalist <br>Protocol</h4>
+                        <p class="book-author">By The Masterpiece</p>
+                    </div>
+                </div>
+                <div class="visual-bg-blob"></div>
+            </div>
+
+            <div class="newsletter-form-container">
+
+                <div id="newsletterFormInitial">
+                    <span class="eyebrow">Join 15,000+ Readers</span>
+                    <h2 class="form-title">Insights directly to <br>your <em>inner circle.</em></h2>
+                    <p class="form-description">
+                        Receive our weekly "Sunday Digest" featuring curated thoughts on design, tech, and the art of
+                        intentional living. No noise, just signal.
+                    </p>
+
+                    <form class="actual-form" id="newsletterForm">
+                        <div class="input-group">
+                            <input type="email" id="subscriberEmail" placeholder="Email Address" required>
+                            <button type="submit" id="subscribeBtn">Join Now</button>
+                        </div>
+                        <p class="privacy-note">We respect your inbox. Unsubscribe anytime.</p>
+                    </form>
+                </div>
+
+                <div id="newsletterSuccess" style="display: none; text-align: center;">
+                    <div class="success-icon">✓</div>
+                    <h2 class="form-title">You're <em>In.</em></h2>
+                    <p class="form-description">
+                        Check your inbox. <strong>"The Minimalist Protocol"</strong> is flying your way.
+                    </p>
+                    <button class="btn-outline" onclick="location.reload()"
+                        style="margin-top: 20px; cursor: pointer;">Back to Journal</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="discovery-hub">
+        <div class="hub-container">
+            <div class="tag-header">
+                <span class="eyebrow">Deep Dive</span>
+                <h2 class="title">Explore by <em>Keyword</em></h2>
+            </div>
+
+            <div class="tag-cloud">
+                <a href="#journal" class="tag" data-filter="minimalism">Minimalism</a>
+                <a href="#journal" class="tag" data-filter="ai">Artificial Intelligence</a>
+                <a href="#journal" class="tag" data-filter="design">Digital Zen</a>
+                <a href="#journal" class="tag" data-filter="future">Future of Work</a>
+                <a href="#journal" class="tag" data-filter="philosophy">Philosophy</a>
+                <a href="#journal" class="tag" data-filter="tech">Cyber-Ethics</a>
+                <a href="#journal" class="tag" data-filter="design">Typography</a>
+            </div>
+            <div class="quick-links-wrap">
+                <div class="quick-scroll">
+                    <div class="link-item">
+                        <span class="item-num">01</span>
+                        <a href="#">Best of 2024 Archives</a>
+                    </div>
+                    <div class="link-item">
+                        <span class="item-num">02</span>
+                        <a href="#">Guest Essay Guidelines</a>
+                    </div>
+                    <div class="link-item">
+                        <span class="item-num">03</span>
+                        <a href="#">Recommended Reading List</a>
+                    </div>
+                    <div class="link-item">
+                        <span class="item-num">04</span>
+                        <a href="#">Community Discord</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="dialogue-section">
+        <div class="feedback-container">
+            <span class="eyebrow">Reader Feedback</span>
+            <h2 class="title">Voices from the <em>Community</em></h2>
+
+            <div class="feedback-grid">
+                <div class="feedback-card">
+                    <p class="quote">"The only blog that I actually look forward to receiving on a Sunday morning. It’s
+                        pure signal in a world of noise."</p>
+                    <div class="user-info">
+                        <strong>Elena Rossi</strong>
+                        <span>Architect & Designer</span>
+                    </div>
+                </div>
+                <div class="feedback-card">
+                    <p class="quote">"The depth of the research here is unparalleled. I've completely changed my digital
+                        habits because of these essays."</p>
+                    <div class="user-info">
+                        <strong>Marcus Thorne</strong>
+                        <span>Tech Ethics Consultant</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-container">
+            <div id="faqView">
+                <div class="faq-header">
+                    <h2 class="title">Common <em>Queries</em></h2>
+                </div>
+                <div class="faq-list">
+                </div>
+                <button class="ask-trigger" id="openAskForm">Can't find an answer? Ask here →</button>
+            </div>
+
+            <div id="askFormView" style="display: none;">
+                <h2 class="title">Submit a <em>Question</em></h2>
+                <p style="margin-bottom: 30px; color: #666;">Ask anything about our research or philosophy. We respond
+                    to the best ones in our Sunday Digest.</p>
+
+                <form id="questionForm">
+                    <div class="input-group-faq">
+                        <input type="text" placeholder="Your Name" required>
+                        <textarea placeholder="What's on your mind?" required rows="4"></textarea>
+                        <button type="submit" class="btn-outline">Send Question</button>
+                        <button type="button" id="backToFaq"
+                            style="background:none; border:none; margin-top:20px; cursor:pointer; font-weight:700; opacity:0.6;">←
+                            Back to FAQs</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="askSuccess" style="display: none; text-align: center; padding: 40px 0;">
+                <div class="success-icon">✓</div>
+                <h3>Sent!</h3>
+                <p>Your question has been added to our editorial queue.</p>
+                <button class="btn-outline" id="resetFaqBtn" style="margin-top:20px;">Return to FAQs</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="vision-section">
+        <div class="parallax-text-container">
+            <h2 class="parallax-bg-text" id="parallaxBg">PERSPECTIVE</h2>
+            <div class="vision-content">
+                <span class="vision-eyebrow">The Manifesto</span>
+                <p class="vision-quote">
+                    "Writing is not just about sharing information; it’s about
+                    <span class="highlight">curating thoughts</span> that stand
+                    the test of time in a world of temporary noise."
+                </p>
+            </div>
+        </div>
+
+        <footer class="final-footer">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">M<span>.</span></div>
+                    <p>A digital space for the modern mind.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <div class="magnet-wrap"><a href="#">Archives</a></div>
+                    <div class="magnet-wrap"><a href="#">Newsletter</a></div>
+                    <div class="magnet-wrap"><a href="#">Contact</a></div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Follow</h4>
+                    <div class="magnet-wrap"><a href="#">Instagram</a></div>
+                    <div class="magnet-wrap"><a href="#">Substack</a></div>
+                    <div class="magnet-wrap"><a href="#">LinkedIn</a></div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Masterpiece. All rights reserved.</p>
+                <p>Built for the curious.</p>
+            </div>
+        </footer>
+    </section>
+
+    <div class="info-drawer" id="infoDrawer">
+        <div class="drawer-overlay" id="drawerClose"></div>
+        <div class="drawer-content">
+            <button class="drawer-exit" id="exitBtn">✕ Close</button>
+
+            <div class="drawer-body">
+                <span class="drawer-cat" id="drawerCat">Category</span>
+                <h2 id="drawerTitle">Article Title</h2>
+                <div class="drawer-meta">Published Dec 19, 2025 • 8 Min Read</div>
+
+                <div class="drawer-image">
+                    <img src="" id="drawerImg" alt="Preview">
+                </div>
+
+                <div class="drawer-text">
+                    <p><strong>The Gist:</strong> This article explores the intersection of aesthetic choices and
+                        psychological well-being.</p>
+                    <p>In this deep dive, we look at why specific textures and lighting setups in modern architecture
+                        contribute to a 40% increase in cognitive focus...</p>
+                    <br>
+                    <a href="#" class="full-read-btn">Read Full Essay →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pillar-modal" id="pillarModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">✕</button>
+            <div class="modal-inner">
+                <span class="modal-eyebrow">Quick Read</span>
+                <h2 id="modalTitle">Insight Title</h2>
+                <div class="modal-body" id="modalBody">
+                </div>
+                <a href="#" class="modal-cta" id="expandStudy">Read Full Case Study</a>
+
+                <div class="full-study-panel" id="fullStudyPanel">
+                    <div class="study-header">
+                        <button id="closeFullStudy">← Back to Summary</button>
+                        <span class="study-progress">Reading: <span id="studySubject">Topic</span></span>
+                    </div>
+                    <div class="study-content">
+                        <div class="study-article">
+                            <h1 id="studyTitle">The Deep Dive Analysis</h1>
+                            <p class="lead">Exploring the nuances of modern design philosophy and its impact on human
+                                behavior.</p>
+                            <hr>
+                            <div id="studyBodyText">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="video-overlay" id="videoOverlay">
+        <div class="video-close" id="closeVideo">✕ Close Player</div>
+        <div class="video-container">
+            <iframe id="promoVideo" src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1" frameborder="0"
+                allow="autoplay; encrypted-media" allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+    <div class="footer-overlay" id="archiveOverlay">
+        <div class="overlay-inner">
+            <button class="close-overlay">✕</button>
+            <h2 class="serif-title">The Archives</h2>
+            <div class="archive-grid">
+                <div class="archive-year">
+                    <span>2025</span>
+                    <a href="#">The Winter Collection</a>
+                    <a href="#">Autumn Musings</a>
+                </div>
+                <div class="archive-year">
+                    <span>2024</span>
+                    <a href="#">The Digital Renaissance</a>
+                    <a href="#">Spring Report</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-overlay" id="contactOverlay">
+        <div class="overlay-inner">
+            <button class="close-overlay">✕</button>
+            <h2 class="serif-title">Get in Touch</h2>
+            <p>For inquiries, collaborations, or deep conversations.</p>
+            <div class="contact-methods">
+                <a href="mailto:hello@masterpiece.com" class="contact-item">hello@masterpiece.com</a>
+                <div class="social-row">
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="back-to-top" id="backToTop">
+        <svg class="progress-circle" width="50" height="50" viewBox="0 0 50 50">
+            <circle class="progress-circle-bg" cx="25" cy="25" r="20"></circle>
+            <circle class="progress-circle-bar" id="progressPath" cx="25" cy="25" r="20"></circle>
+        </svg>
+        <div class="arrow-icon">↑</div>
+    </div>
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="overlay-bg" id="menuClose"></div>
+        <div class="overlay-content">
+            <div class="overlay-left">
+                <span class="eyebrow">Navigation</span>
+                <ul class="main-nav-links">
+                    <li><a href="index.html" style="--i:1">Home</a></li>
+                    <li><a href="#journal" style="--i:2">The Journal</a></li>
+                    <li><a href="#pillars" style="--i:3">The Pillars</a></li>
+                    <li><a href="signup.html" style="--i:4">Join the Club</a></li>
+                </ul>
+            </div>
+
+            <div class="overlay-right">
+                <div class="contact-info">
+                    <span class="eyebrow">Socials</span>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="auth-client.js"></script>
+</body>
+
+</html>

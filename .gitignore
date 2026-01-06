@@ -1,0 +1,13 @@
+# Ignore dependency folders in both subdirectories
+**/node_modules/
+blog-backend/node_modules/
+blog-frontend/node_modules/
+
+**/.env
+blog-backend/.env
+
+.DS_Store
+Thumbs.db
+
+dist/
+build/
