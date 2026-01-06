@@ -1,7 +1,5 @@
 // Step 1: Define the API URL globally
-const API_URL = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost'
-    ? 'http://127.0.0.1:5000'
-    : 'https://your-backend-name.onrender.com'; // <--- Replace this later with your real Render link
+const API_URL = window.location.origin + "/api";// <--- Replace this later with your real Render link
 
 // Simple Reveal Animation
 window.addEventListener('DOMContentLoaded', () => {
